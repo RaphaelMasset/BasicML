@@ -56,7 +56,7 @@ weight ≈ a × age + b × height + c × gender + constant/noise
 
 model has moderate predictive power (63% explained)
 
-The values [0.10803477 0.55435737 0.15299379] here are:
+The values [0.15299379 0.10803477 0.55435737] here are:
 
 age: +0.108 → every year of age increases predicted weight by ~0.11 kg, all else equal.
 
@@ -64,6 +64,6 @@ taille: +0.554 → every extra cm of height adds ~0.55 kg to predicted weight.
 
 sexe: +0.153 → if sexe is encoded as 0/1 (e.g., female=0, male=1), being male adds ~0.15 kg.
 
- polynomial regression, decision trees?
+ try polynomial regression, decision trees?
  
 '''
