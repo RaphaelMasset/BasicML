@@ -1,6 +1,6 @@
 import pandas as pd
 df = pd.read_csv("age_vs_poids_vs_taille_vs_sexe.csv")
-
+df.describe()
 # sub dataframe containing predictiv variables
 #By convention, we denote the predictor matrix X
 X = df[['sexe','age', 'taille']]
@@ -25,6 +25,15 @@ print(reg.coef_)
 
 #the constant term
 print(reg.intercept_)
+
+y_pred = reg.predict(df[['sexe', 'age', 'taille']])
+
+from sklearn.metrics import mean_squared_error, mean_absolute_error, mean_absolute_percentage_error
+print("1er Model: weight ~ gender + age")
+print(f"\tmean_squared_error(y, y_pred): {mean_squared_error(y, y_pred)}")
+print(f"\tmean_absolute_error(y, y_pred): {mean_absolute_error(y, y_pred)}")
+print(f"\tmean_absolute_percentage_error(y, y_pred): {mean_absolute_percentage_error(y, y_pred)}")
+print()
 
 
 
